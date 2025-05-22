@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import {FaAddressBook, FaArchive, FaBook, FaBookOpen, FaCalendarDay, FaCog, FaHome, } from 'react-icons/fa'
+import {FaAddressBook, FaArchive, FaBook, FaBookOpen, FaCalendarDay, FaCog, FaGreaterThan, FaHome, FaLessThan, } from 'react-icons/fa'
 function Home() {
   const[Sidebar ,setsidebar]=useState(false)
 
@@ -15,7 +15,7 @@ function Home() {
     
             {Sidebar ? <div className='bg-slate-500  block w-80'>
              
-         <ul className='mt-6 text-white font-bold' >
+         <ul className='mt-36 text-white font-bold' >
              <li className='mb-4 rounded hover:shadow hover:bg-blue-300 py-2'>
                
                  <a href="" className='px-3'>
@@ -52,7 +52,7 @@ function Home() {
 
              <li className='mb-4 rounded hover:shadow hover:bg-blue-300 py-2'>
                  <a href="" className='px-3'>
-                      <FaArchive className='inline-block w-8 h-6 mr-6'></FaArchive> 
+                      <FaArchive className='inline-block  w-8 h-6 mr-6'></FaArchive> 
                     
                  </a>
                  <Link className='inline-block ' to='favorite'><li>ማሕፉዳ</li></Link>
@@ -60,7 +60,7 @@ function Home() {
 
              <li className='mb-4 rounded hover:shadow hover:bg-blue-300 py-2'>
                  <a href="" className='px-3'>
-                      <FaCalendarDay className='inline-block w-8 h-6 mr-6'></FaCalendarDay> 
+                      <FaCalendarDay className='inline-block  w-8 h-6 mr-6'></FaCalendarDay> 
                     
                  </a>
                  <Link className='inline-block ' to='calender'><li>ዓውደ ኣዋርሕ</li></Link>
@@ -78,7 +78,8 @@ function Home() {
         </div>:null}
         
         <button onClick={toggle}>
-          {Sidebar?"s":"h"}
+          {Sidebar?<FaGreaterThan className='inline-block w-4  '/>:<FaLessThan className='inline-block w-4    '/>}
+          
             </button>
         
     
@@ -87,13 +88,13 @@ function Home() {
     <div className='  w-full'>
    
              
-<div className='bg-[url("meskel.jpg")] bg-cover bg-no-repeat  w-full'>
-<div className=' flex justify-between '>
-    <div className='justify-items-center border border-x-4 '>
-              <h1 className='ml-96 text-gray-950 font-extrabold text-3xl mt-12'>ናይ ማዓልቱ ንባብ</h1>
-                <p className='ml-96  text-gray-950 font-bold text-2xl mt-6'>titel:ሰንበት ዘደብረ ዘይት
+<div className='bg-[url("ስርናይ.jpg")] bg-cover bg-no-repeat  w-full'>
+<div className='text-center'>
+    <div className='justify-items-center border border-y-4 '>
+              <h1 className=' text-gray-950 font-extrabold text-3xl mt-5'>ናይ ማዓልቱ ንባብ</h1>
+                <p className='  text-gray-950 font-bold text-2xl mt-5'>titel:ሰንበት ዘደብረ ዘይት
                 </p>
-                <p className='ml-3 mr-96  text-black font-medium text-xl mt-6 flex justify-center'>    ንባባት፡- 1ተሰ.4:13-ፍጻሜ ፣ 2ጴጥ 3፡7-15፣ ግ.ሓ. 24፡1-22፣ ማቴ 24:1-37።
+                <p className='  text-black text-xl p-8 text-justify font-medium'>    ንባባት፡- 1ተሰ.4:13-ፍጻሜ ፣ 2ጴጥ 3፡7-15፣ ግ.ሓ. 24፡1-22፣ ማቴ 24:1-37።
  
  ቅዱስ ዳዊት፡  ኣብ መዝሙሩ  "እግዚአብሔር ብጋህዲ  ክመጽእ እዩ፥ ግናኸ ሰላሕላሕ ኢሉ ኣይኮነን ዝመጽእ ፥ ኣብ ቅድሜኡ ዝባላዕ ሓዊ ኣሎ፡ ህቦብላ ንፋስ እውን ይኸቦ" ይብል  (መዝ.50፡3)። 
  
@@ -113,20 +114,10 @@ function Home() {
  
  • “ኣብ በቦታኡ ድማ ጥሜትን ፌራን  ምንቅጥቃጥ ምድርን ኪኸውን እዩ . . . ” ብተፈጥሮን ሰብ ብዝሠርሖን ሕልቂት ሕዝቢ፤ ምንቅጥቃጥ ምድሪ ብዝኸፍአ ሳዕቤን፡ ብዝቐልጠፈ ተርእዮን ሎሚ ዓለም ተናዊጻ ምህላዋ ርዱእ ትእምርቲ ምጽኣቱ እዩ። ምዕቡል ዘመን ኣብ ዝተባህለሉ ጊዜ ክብሪ እኽለ ማይን፡ ድርቅን ጥሜትን ዓጸቦን ዝገደደሉ ጊዜ እዩ። ካብዚ ዝገደደ ግና ረኃብ ነፍሲ፡ ጥሜት እንጌራን ጽምኢ ማይን ዘይኮነስ፡ ረኃብ ቃለ እግዚአብሔር ምህላዉ እዩ። ሰብ ሃይማኖቱ ኃዲጉ፡ ንዓውለማ ዝተገዝኣሉ፡ ዝያዳ ቃል እግዚኣብሔር ኣድህቦን ኣድናቖትን ዝህቦ ንስፖርተኛታት፡ ደርፍቲ፡ ተዋሳእቲ . . . ወዘይመስሎ ብምህላዉ እቲ ጊዜ ምቕራቡ ዘረድእ እዩ።
  
- ቅዱስ ጴጥሮስ “ግና መወዳእታ ዅሉ ነገር ቀሪቡ እዩ፡ ስለዚ ርእስኹም ግትኡ ንጸሎት’ውን ንቕሑ” (1ይ.ጴጥ.4፡7) እናተባህለ ንሕና ግና ነቲ “ንቕሑ” ዝብል ቃል ዝዘንጋዕናዮ ንመስል። እሞ’ኸ ደኣ ኣብ’ታ መዓልቲ ፍርዲ ንዝቐርበልና ሕቶ ምላሽ ንምሃብ ድልዋን ዲና፧ ነታ መዓልቲ ብሓቂ ከምዚ ዘለናዮ ዲና ክንጽበያ፧ ያእ ኣይፋልናን! ሕዝበ ክርስቲያን ነቲ ኵሉ ዝተዋህበና ሰምዕታ ከነስተብህለሉ ይግብኣና።
- 
-  ቅዱስ ጳውሎስ  ናብ ተሰሎንቄ ክርስትያን መልእኽቱ “ እቲ ብኅቡእ ዝዓዪ ሕጊ ኣልቦነት ድሮ ጀሚሩ ኣሎ። እንተኾነ እቲ ክኾኖ ዘሎዎ እቲ ዓጊትዎ ዘሎ ካብ መገዱ ክሳዕ ዘልግስ ኣይክኸውንን እዩ፡ ሽዑ እቲ ሕጊ ዘይብሉ ክግለጽ እዩ ጎይታ ኢየሱስ ከኣ በቲንካብ ኣፉ ዝወጽእ ትንፋስ ከጥፍኦ እዩ…. ብግርማ  ምጽኣቱ  ከኣ ክድምስሶ እዩ። ናይቲ ሕጊ ዘይብሉ ምምጻእ፡  በቲ ሰይጣን ዝዓዮ ዘሎ ኩሉ ናይ ሓይልን ሓሳዊ ትእምርትን ተኣምራትን ዝተሰነየ ክኸውን እዩ ነቶም ዝጠፍኡ ዘስሕተሉ ተንኮልን ክፍኣትን ኣሎዎ …እቶም ዝጠፍኡ ከኣ ነቲን ከድሕኖም ዝኽእል ሓቂ ብፍቕሪ ምቕባኣል ስለዝኣበዩ እዩ ”(2ተሰ.2፡ 7-10)።
+ ቅዱስ ጴጥሮስ “ግና መወዳእታ ዅሉ ነገር ቀሪቡ እዩ፡ ስለዚ ርእስኹም ግትኡ ንጸሎት’ውን ንቕሑ” (1ይ.ጴጥ.4፡7) እናተባህለ ንሕና ግና ነቲ “ንቕሑ” ዝብል ቃል ዝዘንጋዕናዮ ንመስል። እሞ እንተኾነ እቲ ክኾኖ ዘሎዎ እቲ ዓጊትዎ ዘሎ ካብ መገዱ ክሳዕ ዘልግስ ኣይክኸውንን እዩ፡ ሽዑ እቲ ሕጊ ዘይብሉ ክግለጽ እዩ ጎይታ ኢየሱስ ከኣ በቲንካብ ኣፉ ዝወጽእ ትንፋስ ከጥፍኦ እዩ…. ብግርማ  ምጽኣቱ  ከኣ ክድምስሶ እዩ። ናይቲ ሕጊ ዘይብሉ ምምጻእ፡  በቲ ሰይጣን ዝዓዮ ዘሎ ኩሉ ናይ ሓይልን ሓሳዊ ትእምርትን ተኣምራትን ዝተሰነየ ክኸውን እዩ ነቶም ዝጠፍኡ ዘስሕተሉ ተንኮልን ክፍኣትን ኣሎዎ …እቶም ዝጠፍኡ ከኣ ነቲን ከድሕኖም ዝኽእል ሓቂ ብፍቕሪ ምቕባኣል ስለዝኣበዩ እዩ ”(2ተሰ.2፡ 7-10)።
  
  
- አብ ትምህርቲ  እምነትና ብዛዕባ ናይ ደቂ ሰብ መፈጸምታታት ክልተ ነገር አለዉ ብዝያዳ ክነስተውዕለሎም ዘሎና።
- 
-  • አብ ሞት ነፍስወከፍና መወዳእታትና እዩ፥ ምስ ሞትና ሽዑ ጸብጻብ ሕይወትና አብ ቅድሚ አምላኽ ነቕርብ። “አብ ዳግማይ ምጽአቱ ምስ ክርስቶስ ዚግበር መወዳእታ ርክብ እዩ ዚጥምቶ። ግና ኸአ ነፍስወከፍ ብኡብኡ ብድሕሪ ሞቱ ብመጠን ተግባራቱን እምነቱን ዓስቡ ከምዝቕበል፥ ሓዲስ ኪዳን ደጋጊሙ ዜረጋግጾ እዩ። ናይቲ ድኻ አልአዛር ምሳሌ ኮነ፥ አብ መስቀል ኮይኑ ኢየሱስ ነቲ ብየማኑ ዝተሰቕለ ሰራቒ ዝበሎ ቃላት ኩሉ አብነት እዩ። ነፍስወከፍ ሰብ አብ ጊዜ ሞቱ ንሕይወቱ ምስ ክርስቶስ ብዘነጻጽር ብናይ ፍላይ ፍርዲ፥ አብታ ዘይትመውት ነፍሱ ዘለዓለማዊ ቅጽዓቱ ይቕበል። (ሓ/ት/ክ 1021/1022)። ሰብ ብግሉ ድሕሪ ሞቱ አብ ቅድሚ አምላኽ ስለ ዝቐርብ ክሰናደወሉ ከምዝግባእ ክፈልጥ አለዎ። ከይተሰናዶኻ ሞት ከም ሰራቒ ከይተመጽአካ ዓቢ ምስትውዕል ይሓትት።
- 
-   • ሓባራዊ  ፍርዲ፡ አብ መጨረሽታ ዓለም ሓባራዊ ፍርዲ አሎ። “ቅድሚ ናይ መወዳእታ ፍርዲ ትንሣኤ ሙታን ማለት “ናይ ጻድቃንን ኃጥአንን ክልቲኦም” ትንሣኤ (ግ.ሓ. 24፡15) ኪፍጸም እዩ። እዚ ኸአ “እቶም አብ መቓብር ዘለዉ ኵላቶም ድምፁ ዚሰምዑላ ሰዓት ክትመጽእ እያ. . . . . ሽዑ እቶም ሠናይ ዝገበሩ ናብ ትንሣኤ  ሕይወት እቶም ክፉእ ዚገበሩ ድማ ናብ ትንሣኤ ኵነኔ ኪኸዱ እዮም (ዮሓ 5፡2829) ድሕርዚ ክርስቶስ “ብኽብሩ ኪመጽእ እዩ፥ ኵሎም  መላእኽቱ’ዉን ምስኡ. . . . ኵሎም አሕዛብ ድማ አብ ቅድሜኡ ኪእከቡ እዮም። ጓሳ ነባግዕ ካብ አጣል ከምዝፈላሊ ከምኡ ከአ ንሱ በብወገኖም ኪፈልዮም፥ ነባግዕ ብየማኑ፥ ነጣል ብጸጋሙ ኬቕውም እዩ. . .. . . ሽዑ እዚአቶም ናብ ናይ ዘለዓለም ቅጽዓት፥ ጻድቃን ግና ናብ ዘለዓለማዊ ሕይወት ኪኸዱ እዮም (ማቴ 25፡ 31፥32፥46)። እቲ መወዳእታ  ፍርዲ ዚኸውን ክርስቶስ ብኽብሪ ምስተመልሰ እዩ። ነታ ዕለትን ሰዓትን ዚፈልጣ ግን አቦ ጥራሕ እዩ። ናይ እቲአ ዕለት እቲአ ምጽአት ዚውስን ከአ ንሱ ጥራሕ እዩ . . . .(ሓ/ት/ክ 1040)።
- 
-  እቲ ተስፋና ግና ኣብ መጽሓፈ ዕብራዉያን  9:28 ኣሎ "እቲ ናይ ብዙኃት ኃጢኣት  ምእንቲ ከርሕቕ ሓንሳብ ዝተሰውዐ ክርስቶስ፣ ኃጢኣት ክጸውር ዘይኮነስ ንምድኃን እቶም ዝጽበይዎ ካልኣይ ግዜ ክግለጽ እዩ" ። እምበር እዚ ሎሚ ዝተነበ ቃል አምላኽ ክንፈርሕ አይኮነን ተጻሒፉ ጉዳይ ሰማይ ከገድስና  ስለዘሎዎ ጥራሕ  እዩ። ቅዱስ ጳውሎስ “ግና አኅዋተይ ከምቶም ተስፋ ዘይብሎም ካልኦት ምእንቲ ኸይትኃዝኑ ብዛዕባ እቶም ዝሞቱ ኽትፍለጡ እደሊ አሎኹ. . . . አምላኽ ነቶም ንኢየሱስ አሚኖም ዝሞቱ ምስኡ ኸም ዘተንሥኦም ንአምን ኢና” (1ተሰሎ.4፡13-14)፥ እናበለ ቅድሚ ሞት ክህልወና ዝግብኦ ርድኢትን ኩነትን ይነግረና። 
- 
- ደጊሙ ጳውሎስ አብ ግ.ሓ. ንዝቐረበሉ  ክሲ ክምልስ እንከሎ “ከምቲ ንሳቶም ዚትስፈዉዎ፡ አነውን  ጻድቃንን ኃጥአንን ካብ ሞት ከምዚትንሥኡ አብ አምላኽ ተስፋ አሎኒ፥ ስለዚ ኸአ እየ አብ ቅድሚ አምላኽ ኮነ፡ አብ ቅድሚ ሰብ ብንጹሕ ሕልና ኽነብር ዝጽዕር ዘሎኹ” (ግ.ሓ. 24፡15-16) ብዝበሎ መሪሕ ቃል፡ ተጠቒምና ሕይወትና ንጎይታ ክንህቦ ንዕደም ኣሎና ።
+
  
    ወስብሐት ለእግዚኣብሔር!!!
  ኣባ ዮናስ ዮሓንስ
@@ -134,15 +125,28 @@ function Home() {
 </p>
               </div>
               
-              <div className='justify-items-center'>
-              <h1 className='mr-96 text-gray-950  font-extrabold text-3xl mt-12'>ናይ ማዓልቱ ስብከት</h1>
-                <p className='mr-96  text-gray-950  font-bold text-2xl mt-6'>titel:</p>
-                <p className='mr-96 ml-3 text-black font-medium text-xl mt-6'>ወተንሥአ እግዚብሔር ከም ዘንቃሕ 
-እምንዋም፣
- ወከመ ኃያል ወኅዳገ ወይን፣
- ወቀተለ ጸሮ በድኅሬሁ።
- (መዝ 77፡65-66)
-</p>
+              <div className='justify-items-center h-96 py-12'>
+              <h1 className=' text-gray-950  font-extrabold text-3xl'>ናይ ማዓልቱ ስብከት</h1>
+              
+
+                <div className='flex justify-evenly'>
+                <p className=' text-black font-medium text-xl bg-gray-50 rounded-2xl  py-8 mt-5 px-20'>ዕለት ፈረንጂ <br />ሮቡዕ<br />02-04-2025
+                </p>
+                
+                
+                <div className='bg-gray-50 rounded-2xl mt-5 p-12'>
+                <p className='text-black  font-bold text-2xl '>ምስማክ</p>
+                <p className=' text-black font-medium text-xl '>ወተንሥአ እግዚብሔር ከም ዘንቃሕ 
+                    እምንዋም፣<br />
+                    ወከመ ኃያል ወኅዳገ ወይን፣<br />
+                    ወቀተለ ጸሮ በድኅሬሁ።<br />
+                    (መዝ 77፡65-66)
+                    </p>
+                    </div>
+                <p className=' text-black font-medium text-xl bg-slate-50 rounded-2xl  py-8 mt-5 px-20'>ዕለት ግእዝ<br />ሮቡዕ<br />02-04-2018
+                    </p>
+                    </div>
+
               </div>
               
 
